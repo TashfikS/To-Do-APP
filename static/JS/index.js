@@ -104,7 +104,7 @@ let form = document.getElementById('form-section')
 form.addEventListener('submit', function (error) {
 
     error.preventDefault()
-
+    
     console.log('Form submitted')
 
     let url = 'http://127.0.0.1:8000/backend/create/'
@@ -135,7 +135,7 @@ form.addEventListener('submit', function (error) {
 
 function editTask(task) {
 
-    console.log('edit clicked for task: ', task)
+    console.log('Edit clicked for task: ', task)
 
     activeTask = task
     document.getElementById('task_name').value = activeTask.task_name
@@ -144,7 +144,7 @@ function editTask(task) {
 
 function deleteTask(task) {
 
-    console.log('delete clicked for task: ', task)
+    console.log('Delete clicked for task: ', task)
 
     fetch(`http://127.0.0.1:8000/backend/delete/${task.id}/`, {
         method: 'DELETE',
